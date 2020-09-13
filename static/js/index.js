@@ -57,16 +57,16 @@ function historial(){
 }
 
 function comprobar(arg){
-	var lg=arg.length;
-	if(arg.indexOf(0) === '1')
-		document.getElementById("s1").innerHTML=arg.substr(1,4);
-		document.getElementById("s2").innerHTML=arg.substr(4,lg);
-	if(arg.indexOf(0) === '4')
-		document.getElementById("aviso").innerHTML=arg.substr(1,lg);
-	if(arg.indexOf(0) === '5')
-		document.getElementById("verhist").innerHTML=arg.substr(1,lg)+"<br>";
+	var lg=arg.split("=");
+	if(lg[0] === '1')
+		document.getElementById("s1").innerHTML=lg[1];
+		document.getElementById("s2").innerHTML=lg[2];
+	if(lg[0] === '4')
+		document.getElementById("aviso").innerHTML=lg[1];
+	if(lg[0] === '5')
+		document.getElementById("verhist").innerHTML=lg[1];
 }
 
   function onMessageArrived(message){
 	comprobar(payloadString);
-  }  
+  }
