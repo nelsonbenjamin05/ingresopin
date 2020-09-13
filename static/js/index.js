@@ -57,7 +57,7 @@ function historial(){
 }
 
   function onMessageArrived(message){
-	var msg=message.payloadString;
+	var msg=new String(message.payloadString);
 	var op=msg.indexOf(0);
 	var arg;
 	if(op === '1')
@@ -72,4 +72,3 @@ function historial(){
 		arg=arg[1]+"<br>";
 		document.getElementById("verhist").innerHTML=arg;
   }  
-
