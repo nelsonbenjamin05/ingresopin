@@ -57,14 +57,12 @@ function historial(){
 }
 
   function onMessageArrived(message){
-	var msg=message.payloadString;
-	var op=msg.indexOf(0);
-	if(op === '1')
-		document.getElementById("s1").innerHTML="s1";
-		document.getElementById("s2").innerHTML="s2";
-	if(op === '4')
-		document.getElementById("aviso").innerHTML="aviso";
-	if(op === '5')
-		var argt=arg[1]+"<br>";
-		document.getElementById("verhist").innerHTML="verhist";
-  }
+	var msg=payloadString.split("-");
+	if(msg[0] === '1')
+		document.getElementById("s1").innerHTML=msg[1];
+		document.getElementById("s2").innerHTML=msg[2];
+	if(msg[0] === '4')
+		document.getElementById("aviso").innerHTML=msg[1];
+	if(msg[0] === '5')
+		document.getElementById("verhist").innerHTML=msg[1]+"<br>";
+  } 
