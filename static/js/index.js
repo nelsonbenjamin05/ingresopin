@@ -1,26 +1,26 @@
 //https://www.eclipse.org/paho/clients/js/
 function entrar() {
-		var msg=document.getElementById("contrasena").value;
-		//msg="1"+msg;
-        message = new Paho.MQTT.Message(msg);
-        message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-        client.send(message);		
+	var msg=document.getElementById("contrasena").value;
+	//msg="1"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);		
 }
 
 function cambio() {
-		var msg=document.getElementById("contrasena").value;
-		//msg="2"+msg;
-        message = new Paho.MQTT.Message(msg);
-        message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-        client.send(message);
+	var msg=document.getElementById("contrasena").value;
+	//msg="2"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);
 }
 
 function historial() {
-		var msg=document.getElementById("contrasena").value;
-		//msg="3"+msg;
-        message = new Paho.MQTT.Message(msg);
-        message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-        client.send(message);
+	var msg=document.getElementById("contrasena").value;
+	//msg="3"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);
 }
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
@@ -67,4 +67,5 @@ function historial() {
 	if(op === '5')
 		arg=msg.slice(1)+"<br>";
 		document.getElementById("verhist").innerHTML=arg2;
-  } 
+  }  
+
