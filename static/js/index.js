@@ -5,7 +5,7 @@
   client.onMessageArrived = onMessageArrived;
   
   var options = {
-   useSSL: false,
+    useSSL: false,
     userName: "nelsonbenjamin05@gmail.com",
     password: "123456789",
     onSuccess:onConnect,
@@ -64,9 +64,8 @@ function historial(){
 		document.getElementById("s2").innerHTML=s[1];
 	if(op === '4')
 		arg=msg.slice(1);
-		document.getElementById("aviso").innerHTML=arg2;
+		document.getElementById("aviso").innerHTML=arg;
 	if(op === '5')
 		arg=msg.slice(1)+"<br>";
-		document.getElementById("verhist").innerHTML=arg2;
-  }  
-
+		document.getElementById("verhist").innerHTML=arg;
+  } 
