@@ -34,24 +34,24 @@
 
 function entrar(){
 	var msg=new String(document.getElementById("contrasena").value);
-	msg="1"+msg;
-    message = new Paho.MQTT.Message(msg);
+	//msg="1"+msg;
+    message = new Paho.MQTT.Message("entrar");
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);		
 }
 
 function cambio(){
 	var msg=new String(document.getElementById("contrasena").value);
-	msg="2"+msg;
-    message = new Paho.MQTT.Message(msg);
+	//msg="2"+msg;
+    message = new Paho.MQTT.Message("cambio");
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
 }
 
 function historial(){
 	var msg=new String(document.getElementById("contrasena").value);
-	msg="3"+msg;
-    message = new Paho.MQTT.Message(msg);
+	//msg="3"+msg;
+    message = new Paho.MQTT.Message("historial");
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
 }
@@ -71,5 +71,5 @@ function historial(){
 	if(op === '5')
 		arg=msg.slice(1)+"<br>";
 		document.getElementById("verhist").innerHTML=arg;
-  }  
+  }
 
