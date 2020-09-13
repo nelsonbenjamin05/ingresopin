@@ -26,7 +26,7 @@ function historial() {
 var op;
 var arg2;
 var s;
-var argt;
+
 function comprobar(arg){
 	op=arg.indexOf(0);
 	if(op === '1')
@@ -38,9 +38,8 @@ function comprobar(arg){
 		arg2=arg.slice(1);
 		document.getElementById("aviso").innerHTML=arg2;
 	if(op === '5')
-		arg2=arg.slice(1);
-		argt=argt+arg2;
-		document.getElementById("verhist").innerHTML=argt;
+		arg2=arg.slice(1)+"<br>";
+		document.getElementById("verhist").innerHTML=arg2;
 }
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
@@ -75,5 +74,5 @@ function comprobar(arg){
   function onMessageArrived(message) {
 	var msg=message.payloadString;
 	comprobar(msg)
-  }
+  }  
   
