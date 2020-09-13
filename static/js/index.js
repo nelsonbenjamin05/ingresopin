@@ -34,24 +34,24 @@
 
 function entrar(){
 	var msg=new String(document.getElementById("contrasena").value);
-	//msg="1"+msg;
-    message = new Paho.MQTT.Message("entrar");
+	msg="1"+msg;
+    message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);		
 }
 
 function cambio(){
 	var msg=new String(document.getElementById("contrasena").value);
-	//msg="2"+msg;
-    message = new Paho.MQTT.Message("cambio");
+	msg="2"+msg;
+    message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
 }
 
 function historial(){
 	var msg=new String(document.getElementById("contrasena").value);
-	//msg="3"+msg;
-    message = new Paho.MQTT.Message("historial");
+	msg="3"+msg;
+    message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
 }
@@ -61,15 +61,15 @@ function historial(){
 	var op=msg.indexOf(0);
 	var arg;
 	if(op === '1')
-		arg=msg.slice(1);
-		s=arg.split("-");
-		document.getElementById("s1").innerHTML=s[0];
-		document.getElementById("s2").innerHTML=s[1];
+		arg=msg.split("-");
+		document.getElementById("s1").innerHTML=arg[1];
+		document.getElementById("s2").innerHTML=arg[2];
 	if(op === '4')
-		arg=msg.slice(1);
+		arg=msg.split("-");
 		document.getElementById("aviso").innerHTML=arg;
 	if(op === '5')
-		arg=msg.slice(1)+"<br>";
+		arg=msg.split("-");
+		arg=arg[1]+"<br>";
 		document.getElementById("verhist").innerHTML=arg;
-  }
+  }  
 
