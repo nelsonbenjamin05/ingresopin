@@ -59,17 +59,14 @@ function historial(){
   function onMessageArrived(message){
 	var msg=message.payloadString;
 	var op=msg.indexOf(0);
-	var arg;
+	//var arg=msg.split("-");
 	if(op === '1')
-		arg=msg.split("-");
-		document.getElementById("s1").innerHTML=arg[1];
-		document.getElementById("s2").innerHTML=arg[2];
+		document.getElementById("s1").innerHTML="s1";
+		document.getElementById("s2").innerHTML="s2";
 	if(op === '4')
-		arg=msg.split("-");
-		document.getElementById("aviso").innerHTML=arg[1];
+		document.getElementById("aviso").innerHTML="aviso";
 	if(op === '5')
-		arg=msg.split("-");
 		var argt=arg[1]+"<br>";
-		document.getElementById("verhist").innerHTML=argt;
-  }  
+		document.getElementById("verhist").innerHTML="verhist";
+  } 
 
