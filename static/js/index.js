@@ -1,27 +1,4 @@
 //https://www.eclipse.org/paho/clients/js/
-function entrar(){
-	var msg=new String(document.getElementById("contrasena").value);
-	msg="1"+msg;
-    message = new Paho.MQTT.Message(msg);
-    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-    client.send(message);		
-}
-
-function cambio(){
-	var msg=new String(document.getElementById("contrasena").value);
-	msg="2"+msg;
-    message = new Paho.MQTT.Message(msg);
-    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-    client.send(message);
-}
-
-function historial(){
-	var msg=new String(document.getElementById("contrasena").value);
-	msg="3"+msg;
-    message = new Paho.MQTT.Message(msg);
-    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
-    client.send(message);
-}
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
   client.onConnectionLost = onConnectionLost;
@@ -51,6 +28,30 @@ function historial(){
       console.log("onConnectionLost:"+responseObject.errorMessage);
     }
   }
+
+function entrar(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="1"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);		
+}
+
+function cambio(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="2"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);
+}
+
+function historial(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="3"+msg;
+    message = new Paho.MQTT.Message(msg);
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);
+}
 
   function onMessageArrived(message){
 	var msg=message.payloadString;
