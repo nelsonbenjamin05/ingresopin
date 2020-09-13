@@ -23,19 +23,23 @@ function historial() {
         client.send(message);
 }
 
+var op;
+var arg2;
+var s;
+var argt;
 function comprobar(arg){
-	var op=arg.indexOf(0);
+	op=arg.indexOf(0);
 	if(op === '1')
-		arg=arg.slice(1);
-		s=arg.split("-");
+		arg2=arg.slice(1);
+		s=arg2.split('-');
 		document.getElementById("s1").innerHTML=s[0];
 		document.getElementById("s2").innerHTML=s[1];
 	if(op === '4')
-		arg=arg.slice(1);
-		document.getElementById("aviso").innerHTML=arg;
+		arg2=arg.slice(1);
+		document.getElementById("aviso").innerHTML=arg2;
 	if(op === '5')
-		arg=arg.slice(1);
-		argt=argt+arg;
+		arg2=arg.slice(1);
+		argt=argt+arg2;
 		document.getElementById("verhist").innerHTML=argt;
 }
   
