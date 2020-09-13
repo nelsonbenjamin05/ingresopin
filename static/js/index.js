@@ -57,7 +57,7 @@ function historial(){
 }
 
 function comprobar(arg){
-	var msg=arg.split("-");
+	var msg=arg.split('');
 	if(msg[0] === '1')
 		document.getElementById("s1").innerHTML=msg[1];
 		document.getElementById("s2").innerHTML=msg[2];
