@@ -1,23 +1,23 @@
 //https://www.eclipse.org/paho/clients/js/
-function entrar() {
-	var msg=document.getElementById("contrasena").value;
-	//msg="1"+msg;
+function entrar(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="1"+msg;
     message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);		
 }
 
-function cambio() {
-	var msg=document.getElementById("contrasena").value;
-	//msg="2"+msg;
+function cambio(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="2"+msg;
     message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
 }
 
-function historial() {
-	var msg=document.getElementById("contrasena").value;
-	//msg="3"+msg;
+function historial(){
+	var msg=new String(document.getElementById("contrasena").value);
+	msg="3"+msg;
     message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
@@ -37,7 +37,7 @@ function historial() {
 
   client.connect(options);
    
-  function onConnect() {
+  function onConnect(){
     console.log("Conectado...");
     client.subscribe("nelsonbenjamin05@gmail.com/ts1");
   }
@@ -46,13 +46,13 @@ function historial() {
     console.log(e);
   }
 
-  function onConnectionLost(responseObject) {
+  function onConnectionLost(responseObject){
     if (responseObject.errorCode !== 0) {
       console.log("onConnectionLost:"+responseObject.errorMessage);
     }
   }
 
-  function onMessageArrived(message) {
+  function onMessageArrived(message){
 	var msg=message.payloadString;
 	var op=msg.indexOf(0);
 	var arg;
