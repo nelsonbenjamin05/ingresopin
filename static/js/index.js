@@ -1,7 +1,7 @@
 //https://www.eclipse.org/paho/clients/js/
 function entrar() {
 		var msg=document.getElementById("contrasena").value;
-		msg='1'+msg;
+		msg="1"+msg;
         message = new Paho.MQTT.Message(msg);
         message.destinationName = "nelsonbenjamin05@gmail.com/ts";
         client.send(message);		
@@ -9,7 +9,7 @@ function entrar() {
 
 function cambio() {
 		var msg=document.getElementById("contrasena").value;
-		msg='2'+msg;
+		msg="2"+msg;
         message = new Paho.MQTT.Message(msg);
         message.destinationName = "nelsonbenjamin05@gmail.com/ts";
         client.send(message);
@@ -17,7 +17,7 @@ function cambio() {
 
 function historial() {
 		var msg=document.getElementById("contrasena").value;
-		msg='3'+msg;
+		msg="3"+msg;
         message = new Paho.MQTT.Message(msg);
         message.destinationName = "nelsonbenjamin05@gmail.com/ts";
         client.send(message);
