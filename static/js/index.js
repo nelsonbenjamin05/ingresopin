@@ -58,6 +58,8 @@ function historial(){
 
   function onMessageArrived(message){
 	var msg=new String(message.payloadString);
+	msg="1-la-chuma-estubo-buena";
+	console.log(msg);
 	var op=msg.indexOf(0);
 	var arg;
 	if(op === '1')
@@ -71,4 +73,4 @@ function historial(){
 		arg=msg.split("-");
 		var argt=arg[1]+"<br>";
 		document.getElementById("verhist").innerHTML=argt;
-  } 
+  }  
