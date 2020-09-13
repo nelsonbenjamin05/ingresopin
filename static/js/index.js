@@ -17,6 +17,9 @@
   function onConnect(){
     console.log("Conectado...");
     client.subscribe("nelsonbenjamin05@gmail.com/ts1");
+	message = new Paho.MQTT.Message("hola web");
+    message.destinationName = "nelsonbenjamin05@gmail.com/ts";
+    client.send(message);
   }
 
   function doFail(e){
@@ -68,4 +71,5 @@ function historial(){
 	if(op === '5')
 		arg=msg.slice(1)+"<br>";
 		document.getElementById("verhist").innerHTML=arg;
-  } 
+  }  
+
