@@ -24,7 +24,7 @@ function historial() {
 }
 
 function comprobar(arg){
-	var op=arg.indexOf(0):
+	var op=arg.indexOf(0);
 	if(op === '1')
 		arg=arg.slice(1);
 		s=arg.split(-);
