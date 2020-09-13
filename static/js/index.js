@@ -22,25 +22,6 @@ function historial() {
         message.destinationName = "nelsonbenjamin05@gmail.com/ts";
         client.send(message);
 }
-
-var op;
-var arg2;
-var s;
-
-function comprobar(arg){
-	op=arg.indexOf(0);
-	if(op === '1')
-		arg2=arg.slice(1);
-		s=arg2.split("-");
-		document.getElementById("s1").innerHTML=s[0];
-		document.getElementById("s2").innerHTML=s[1];
-	if(op === '4')
-		arg2=arg.slice(1);
-		document.getElementById("aviso").innerHTML=arg2;
-	if(op === '5')
-		arg2=arg.slice(1)+"<br>";
-		document.getElementById("verhist").innerHTML=arg2;
-}
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
   client.onConnectionLost = onConnectionLost;
@@ -73,6 +54,17 @@ function comprobar(arg){
 
   function onMessageArrived(message) {
 	var msg=message.payloadString;
-	comprobar(msg)
-  }  
-  
+	var op=msg.indexOf(0);
+	var arg;
+	if(op === '1')
+		arg=msg.slice(1);
+		s=arg.split("-");
+		document.getElementById("s1").innerHTML=s[0];
+		document.getElementById("s2").innerHTML=s[1];
+	if(op === '4')
+		arg=msg.slice(1);
+		document.getElementById("aviso").innerHTML=arg2;
+	if(op === '5')
+		arg=msg.slice(1)+"<br>";
+		document.getElementById("verhist").innerHTML=arg2;
+  } 
