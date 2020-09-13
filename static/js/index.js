@@ -59,7 +59,6 @@ function historial(){
   function onMessageArrived(message){
 	var msg=message.payloadString;
 	var op=msg.indexOf(0);
-	//var arg=msg.split("-");
 	if(op === '1')
 		document.getElementById("s1").innerHTML="s1";
 		document.getElementById("s2").innerHTML="s2";
@@ -68,5 +67,4 @@ function historial(){
 	if(op === '5')
 		var argt=arg[1]+"<br>";
 		document.getElementById("verhist").innerHTML="verhist";
-  } 
-
+  }
