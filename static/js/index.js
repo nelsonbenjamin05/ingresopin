@@ -61,14 +61,14 @@ function historial(){
 	var op=msg.indexOf(0);
 	var arg;
 	if(op === '1')
-		arg=msg.indexOf(1);
-		document.getElementById("s1").innerHTML=indexOf(2);;
-		document.getElementById("s2").innerHTML=indexOf(3);;
+		arg=msg.split("-");
+		document.getElementById("s1").innerHTML=arg[1];
+		document.getElementById("s2").innerHTML=arg[2];
 	if(op === '4')
-		arg=msg.indexOf(4);
-		document.getElementById("aviso").innerHTML=arg;
+		arg=msg.split("-");
+		document.getElementById("aviso").innerHTML=arg[1];
 	if(op === '5')
-		arg=msg.indexOf(5);
-		arg=arg+"<br>";
-		document.getElementById("verhist").innerHTML=arg;
-  }  
+		arg=msg.split("-");
+		var argt=arg[1]+"<br>";
+		document.getElementById("verhist").innerHTML=argt;
+  } 
