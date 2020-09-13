@@ -27,7 +27,7 @@ function comprobar(arg){
 	var op=arg.indexOf(0);
 	if(op === '1')
 		arg=arg.slice(1);
-		s=arg.split(-);
+		s=arg.split("-");
 		document.getElementById("s1").innerHTML=s[0];
 		document.getElementById("s2").innerHTML=s[1];
 	if(op === '4')
