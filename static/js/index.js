@@ -56,8 +56,8 @@ function historial(){
     client.send(message);
 }
 
-  function onMessageArrived(message){
-	var msg=payloadString.split("-");
+function comprobar(arg){
+	var msg=arg.split("-");
 	if(msg[0] === '1')
 		document.getElementById("s1").innerHTML=msg[1];
 		document.getElementById("s2").innerHTML=msg[2];
@@ -65,4 +65,8 @@ function historial(){
 		document.getElementById("aviso").innerHTML=msg[1];
 	if(msg[0] === '5')
 		document.getElementById("verhist").innerHTML=msg[1]+"<br>";
+}
+
+  function onMessageArrived(message){
+	comprobar(payloadString);
   } 
