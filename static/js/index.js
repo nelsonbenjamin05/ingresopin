@@ -68,5 +68,6 @@ function comprobar(arg){
 }
 
   function onMessageArrived(message){
-	comprobar(payloadString);
-  }  
+	  var rec=message.payloadString;
+	comprobar(rec);
+  }   
