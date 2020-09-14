@@ -57,7 +57,6 @@ function historial(){
 }
 
 function comprobar(arg){
-	var lg=length(arg);
 	if(arg[0] === '1')
 		document.getElementById("s1").innerHTML=arg[1];
 		document.getElementById("s2").innerHTML=arg[2];
@@ -70,4 +69,4 @@ function comprobar(arg){
   function onMessageArrived(message){
 	  var rec=message.payloadString;
 	comprobar(rec);
-  }   
+  }  
