@@ -71,10 +71,10 @@ function comprobar(arg){
 		for (var i=2;i<21;i++){
 			ms=ms+arg[i]
 		}
-		document.getElementById("verhist").innerHTML=ms+'<br>';
+		document.getElementById("verhist").innerHTML=ms+'<br/>';
 }
 
   function onMessageArrived(message){
 	  var rec=message.payloadString;
 	comprobar(rec);
-  }  
+  } 
