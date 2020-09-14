@@ -69,4 +69,4 @@ function comprobar(arg){
 
   function onMessageArrived(message){
 	comprobar(payloadString);
-  }
+  }  
