@@ -58,15 +58,21 @@ function historial(){
 
 function comprobar(arg){
 	if(arg[0] === '1')
-		document.getElementById("s1").innerHTML=arg[1];
-		document.getElementById("s2").innerHTML=arg[2];
+		document.getElementById("s1").innerHTML=arg[2]+arg[3]+arg[4];
+		document.getElementById("s2").innerHTML=arg[6]+arg[7]+arg[8];
 	if(arg[0] === '4')
-		document.getElementById("aviso").innerHTML=arg[1];
+		for (var i=2;i<21;i++){
+			var ms=ms+arg[i]
+		}
+		document.getElementById("aviso").innerHTML=ms;
 	if(arg[0] === '5')
-		document.getElementById("verhist").innerHTML=arg[1];
+		for (var i=2;i<21;i++){
+			var ms=ms+arg[i]
+		}
+		document.getElementById("verhist").innerHTML=ms;
 }
 
   function onMessageArrived(message){
 	  var rec=message.payloadString;
 	comprobar(rec);
-  }  
+  }
