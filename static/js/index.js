@@ -57,14 +57,14 @@ function historial(){
 }
 
 function comprobar(arg){
-	var lg=arg.split("=");
-	if(lg[0] === '1')
-		document.getElementById("s1").innerHTML=lg[1];
-		document.getElementById("s2").innerHTML=lg[2];
-	if(lg[0] === '4')
-		document.getElementById("aviso").innerHTML=lg[1];
-	if(lg[0] === '5')
-		document.getElementById("verhist").innerHTML=lg[1];
+	var lg=length(arg);
+	if(arg[0] === '1')
+		document.getElementById("s1").innerHTML=arg[1];
+		document.getElementById("s2").innerHTML=arg[2];
+	if(arg[0] === '4')
+		document.getElementById("aviso").innerHTML=arg[1];
+	if(arg[0] === '5')
+		document.getElementById("verhist").innerHTML=arg[1];
 }
 
   function onMessageArrived(message){
