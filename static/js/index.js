@@ -61,17 +61,17 @@ function comprobar(arg){
 		document.getElementById("s1").innerHTML=arg[2]+arg[3]+arg[4];
 		document.getElementById("s2").innerHTML=arg[6]+arg[7]+arg[8];
 	if(arg[0] === '4')
-		var ms='';
+		var ms='--';
 		for (var i=2;i<21;i++){
 			ms=ms+arg[i]
 		}
 		document.getElementById("aviso").innerHTML=ms;
 	if(arg[0] === '5')
-		var ms='';
+		var ms='--';
 		for (var i=2;i<21;i++){
 			ms=ms+arg[i]
 		}
-		document.getElementById("verhist").innerHTML=ms;
+		document.getElementById("verhist").innerHTML=ms+'<br>';
 }
 
   function onMessageArrived(message){
