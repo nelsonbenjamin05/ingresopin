@@ -40,8 +40,7 @@ function entrar(){
 }
 
 function historial(){
-	var msg=new String(document.getElementById("contrasena").value);
-	msg="3"+msg;
+	msg="3";
     message = new Paho.MQTT.Message(msg);
     message.destinationName = "nelsonbenjamin05@gmail.com/ts";
     client.send(message);
@@ -61,4 +60,4 @@ function comprobar(arg){
   function onMessageArrived(message){
 	  var ms=message.payloadString;
 	comprobar(ms);
-  }  
+  } 
